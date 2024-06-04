@@ -1,0 +1,511 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5003"
+  },
+  "Routes": [
+    //Authentication
+    //login
+    {
+      "DownstreamPathTemplate": "/api/Auth/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7111
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/Auth/login",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    //register
+    {
+      "DownstreamPathTemplate": "/api/Auth/register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7111
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/Auth/register",
+      "UpstreamHttpMethod": [ "GET", "PUT", "POST" ]
+    },
+    //refreshToken
+    {
+      "DownstreamPathTemplate": "/api/Auth/refreshToken",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7111
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/Auth/refreshToken",
+      "UpstreamHttpMethod": [ "GET", "PUT", "POST" ]
+    },
+    //GetAllUsers
+    {
+      "DownstreamPathTemplate": "/api/Auth",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7111
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/Auth",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //GetUserById
+    {
+      "DownstreamPathTemplate": "/api/Auth/id?id={id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7111
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/Auth/id?id={id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //DeleteUser
+    {
+      "DownstreamPathTemplate": "/api/Auth/id?id={id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7111
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/Auth/id?id={id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+    //Category
+    //GetCategoryList
+    {
+      "DownstreamPathTemplate": "/api/Categories",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7112
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Categories",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //GetCategoryById
+    {
+      "DownstreamPathTemplate": "/api/Categories/id?id={id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7112
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Categories/id?id={id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //CreateCategory
+    {
+      "DownstreamPathTemplate": "/api/Categories/Create",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7112
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Categories/Create",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    //UpdateCategory
+    {
+      "DownstreamPathTemplate": "/api/Categories/Update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7112
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Categories/Update",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    //DeleteCategory
+    {
+      "DownstreamPathTemplate": "/api/Categories/Delete",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7112
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Categories/Delete",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    //Movie
+    //GetMovieList
+    {
+      "DownstreamPathTemplate": "/api/Movies",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Movies",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //GetMovieListByCategoryId
+    {
+      "DownstreamPathTemplate": "/api/Movies/category/{categoryId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Movies/category/{categoryId}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //GetMovieByIdForUpdate
+    {
+      "DownstreamPathTemplate": "/api/Movies/update/id?id={id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Movies/update/id?id={id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //GetMovieById
+    {
+      "DownstreamPathTemplate": "/api/Movies/id?id={id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Movies/id?id={id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //GetMovieNew
+    {
+      "DownstreamPathTemplate": "/api/Movies/new",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Movies/new",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //CreateMovie
+    {
+      "DownstreamPathTemplate": "/api/Movies/Create",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Movies/Create",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    //UpdateMovie
+    {
+      "DownstreamPathTemplate": "/api/Movies/Update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Movies/Update",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    //DeleteMovie
+    {
+      "DownstreamPathTemplate": "/api/Movies/Delete",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Movies/Delete",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    //Search
+    {
+      "DownstreamPathTemplate": "/api/Movies/Search",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Movies/Search",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //Episode
+    //GetEpisodeList
+    {
+      "DownstreamPathTemplate": "/api/Episodes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Episodes",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //GetEpisodeByMovieId
+    {
+      "DownstreamPathTemplate": "/api/Episodes/movie/movieId?movieId={movieId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Episodes/movie/movieId?movieId={movieId}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //GetLastestEpisodesByMovieId
+    {
+      "DownstreamPathTemplate": "/api/Episodes/latestByMovie/{movieId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Episodes/latestByMovie/{movieId}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //GetEpisodeById
+    {
+      "DownstreamPathTemplate": "/api/Episodes/id?id={id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Episodes/id?id={id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //CreateEpisode
+    {
+      "DownstreamPathTemplate": "/api/Episodes/Create",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Episodes/Create",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    //UpdateEpisode
+    {
+      "DownstreamPathTemplate": "/api/Episodes/Update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Episodes/Update",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    //DeleteEpisode
+    {
+      "DownstreamPathTemplate": "/api/Episodes/Delete?id={id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Episodes/Delete?id={id}",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    //Comment
+    //GetCommentList
+    {
+      "DownstreamPathTemplate": "/api/Comment",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Comment",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //GetCommentByMovieId
+    {
+      "DownstreamPathTemplate": "/api/Comment/movie/movieId?movieId={movieId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Comment/movie/movieId?movieId={movieId}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //GetCommentById
+    {
+      "DownstreamPathTemplate": "/api/Comment/id?id={id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Comment/id?id={id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //CalculateAverageRating
+    {
+      "DownstreamPathTemplate": "/api/Comment/averageRating/{movieId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Comment/averageRating/{movieId}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //CreateComment
+    {
+      "DownstreamPathTemplate": "/api/Comment/Create",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Comment/Create",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    //UpdateComment
+    {
+      "DownstreamPathTemplate": "/api/Comment/Update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Comment/Update",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    //DeleteComment
+    {
+      "DownstreamPathTemplate": "/api/Comment/Delete",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Comment/Delete",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    //Statistic
+    //GetStatisticTheLastThreeDay
+    {
+      "DownstreamPathTemplate": "/api/Statistic",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Statistic",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //GetStatisticByDay
+    {
+      "DownstreamPathTemplate": "/api/Statistic",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+
+      ],
+      "UpstreamPathTemplate": "/apigateway/Statistic",
+      "UpstreamHttpMethod": [ "POST" ]
+    }
+  ]
+}

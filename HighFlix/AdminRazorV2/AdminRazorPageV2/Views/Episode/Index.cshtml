@@ -1,0 +1,67 @@
+﻿@using Microsoft.AspNetCore.Http
+@using DTOs.EpisodeDTOs.ResponseDTO;
+@model IEnumerable<EpisodeResponse>
+
+@{
+    ViewData["Title"] = "Episode Page";
+}
+
+<div class="mt-5">
+    <div class="row mb-5">
+        <div class="col-sm-8">
+            <h2>Manage <b>Episode</b></h2>
+        </div>
+        <div class="col-sm-4" style="display:flex;justify-content:flex-end;padding-right:2rem;">
+            <a asp-action="Create" class="btn w-full bg-primary text-white" style=""><span>Add New Episode</span></a>
+        </div>
+    </div>
+
+    <table id="example" class="ui celled table" style="width:100%">
+        <thead>
+            <tr>
+                <th>Episode Id</th>
+                <th>Episode Name</th>
+                <th>Movie Id</th>
+                <th>Movie Name</th>
+                <th>Description</th>
+                <th>MediaLink</th>
+                <th>IsActive</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EpisodeId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EpisodeName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MovieId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MovieName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        <a target="_blank" href="@Html.DisplayFor(modelItem => item.MediaLink)">@Html.DisplayFor(modelItem => item.MediaLink)</a>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsActive)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Detail", "Detail", new {  id=item.EpisodeId }) |
+                        @Html.ActionLink("Edit", "Edit", new {  id=item.EpisodeId }) |
+                        @Html.ActionLink("Delete", "Delete", new {  id=item.EpisodeId })
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>

@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css";
+.high-nav-header .semi-navigation-header-text {
+  color: #4361ee;
+  font-size: 20px;
+}
+
+.semi-table-thead > .semi-table-row > .semi-table-row-head {
+  color: #4361ee !important;
+}
+
+.semi-spin-wrapper {
+  top: 50%;
+  left: 50%;
+}
+
+.ck.ck-reset_all,
+.ck.ck-reset_all * {
+  font-family: "Inter" !important;
+}
+
+.semi-navigation {
+  width: 364px;
+}
+
+.semi-calendar-week .semi-calendar-all-day {
+  display: none !important;
+}
+
+.semi-calendar-event-items .semi-calendar-event-item .semi-calendar-event-day {
+  height: 40px !important;
+}
+
+.semi-navigation-item-icon-info {
+  width: 20px !important;
+}
+.logoutItem {
+  background-color: rgb(229 231 235);
+}
+.logoutItem .semi-navigation-item-text {
+  text-align: center !important;
+  width: 100%;
+}
+
+/* style image blog */
+.blogContainer p:nth-child(3) img {
+  height: 300px;
+}
+
+.blogContainer p:nth-child(3) {
+  text-align: center;
+}

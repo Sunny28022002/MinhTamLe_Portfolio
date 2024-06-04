@@ -1,0 +1,23 @@
+.card {
+    padding: 2em;
+}
+
+.read-the-doc {
+    color: #888; 
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.star {
+    cursor: pointer;
+}
+
+.Rating {
+    display: flex;
+    flex-direction: row;
+    /* Display the radio inputs horizontally */
+    align-items: center;
+    /* Vertically center the stars and radio inputs */
+}
